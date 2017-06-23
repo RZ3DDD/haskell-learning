@@ -1,13 +1,4 @@
-doubleMe x = x + x
+{- Героновы треугольники со сторонами меньше 100   --неудачно, пока--  -}
+geronTriples = [ ( n * (m^2 + k^2), m * (n^2 + k^2), (m+n) * (m*n - k^2) ) | n <- [1..10], m <- [1..10], k <- [1..10]]
 
-doubleUs x y = x*2 + y*2
-doubleUs x y = doubleMe x + doubleMe y
 
-doubleSmallNumber x = if x > 100
-                      then x
-                      else x + x
-
-doubleSmallNumber'  x = (if x > 100 then x else x + x) + 1
-doubleSmallNumber'' x =  if x > 100 then x else x + x + 1
-
-conanO'Brian = "Это я, Конан О'Брайан!"

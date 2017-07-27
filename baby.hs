@@ -10,4 +10,5 @@ doubleSmallNumber x = if x > 100
 doubleSmallNumber'  x = (if x > 100 then x else x + x) + 1
 doubleSmallNumber'' x =  if x > 100 then x else x + x + 1
 
-conanO'Brian = "Это я, Конан О'Брайан!"
+conanOBrian = "Это я, Конан О'Брайан!"
+{- комментарий Haskell -}

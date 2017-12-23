@@ -1,13 +1,14 @@
-square :: Integer -> Integer
+{- square :: Integer -> Integer
 square x = x * x
-
+-}
+{-
 -- Четвёртая степень (quad) посредством композиции второй (square)
 quad :: Integer -> Integer
-quad x = (square.square) x
+quad x = square.square x
 
 -- Определение композии попроще
 quad_quad = (quad.quad)
-
+-}
 three :: Integer -> Integer
 three x = 3
 
@@ -21,9 +22,9 @@ sort [] = []
 sort (x : xs) = sort [ y | y <- xs, y < x ] ++
                [x] ++
                sort [ y | y <- xs, y >= x]
-               
-               
--- Сумма элементов списка               
+
+
+-- Сумма элементов списка
 sum' :: [Int] -> Int
 sum' [] = 0
 sum' (x:xs) = x + sum' xs
@@ -43,4 +44,14 @@ fact' n | n==0 = 1
 thirdDim :: Float -> Float -> Float -> Float
 thirdDim vlm d1 d2 = (vlm / d1) / d2
 
+-- Определение square через тип Num
+square :: Num a => a -> a
+square x = x * x
 
+-- Четвёртая степень (quad) посредством композиции второй (square)
+quad :: Num a => a -> a 
+quad x = (square.square) x
+
+-- Определение композии попроще
+quad_quad :: Num a => a -> a
+quad_quad = (quad.quad) 

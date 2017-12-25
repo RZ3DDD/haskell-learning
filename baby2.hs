@@ -55,3 +55,10 @@ quad x = (square.square) x
 -- Определение композии попроще
 quad_quad :: Num a => a -> a
 quad_quad = (quad.quad) 
+
+plusc :: Num a => a -> a -> a
+plusc x y = x + y
+
+successor :: Num a => a -> a
+successor  =  plusc 1
+

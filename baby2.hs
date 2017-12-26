@@ -60,5 +60,5 @@ plusc :: Num a => a -> a -> a
 plusc x y = x + y
 
 successor :: Num a => a -> a
-successor  =  plusc 1
+successor = plusc 1
 

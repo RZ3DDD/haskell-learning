@@ -56,9 +56,24 @@ quad x = (square.square) x
 quad_quad :: Num a => a -> a
 quad_quad = (quad.quad) 
 
+
+
+-- Разные функции
+
 plusc :: Num a => a -> a -> a
 plusc x y = x + y
 
 successor :: Num a => a -> a
 successor = plusc 1
+
+myFunc :: String -> String
+myFunc s = reverse s
+
+greater :: (Num a, Ord a) => (a, a) -> a
+greater (x, y) | x >= y    = x
+               | otherwise = y
+               
+               
+
+
 

@@ -74,6 +74,25 @@ greater (x, y) | x >= y    = x
                | otherwise = y
                
                
+sumOfLast2dig :: Int -> Int
+sumOfLast2dig x = d0 + d1
+              where d0 = x `mod` 10
+                    d1 = shift `mod` 10
+                    shift = x `div` 10
 
+sumOfLast2dig' :: Int -> Int
+sumOfLast2dig' x =
+               let d0 = x `mod` 10
+                   d1 = shift `mod` 10
+                   shift = x `div` 10
+               in  d0 + d1
+
+
+sumOfLast2dig'' :: Int -> Int
+sumOfLast2dig'' x =
+               let d0 = x `mod` 10
+                   d1 = shift `mod` 10
+               in  d0 + d1
+               where shift = x `div` 10
 
 

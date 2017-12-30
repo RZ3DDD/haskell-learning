@@ -44,17 +44,26 @@ fact' n | n==0 = 1
 thirdDim :: Float -> Float -> Float -> Float
 thirdDim vlm d1 d2 = (vlm / d1) / d2
 
+-- Функция двойного выполнения передаваемой ей функции
+twice :: Num a => (a -> a) -> (a -> a)
+twice f x = f (f x)
+
 -- Определение square через тип Num
 square :: Num a => a -> a
 square x = x * x
 
+
+-- Четвёртая степень (quad) посредством выполнения функции square дважды
+quad :: Num a => a -> a
+quad = twice square
+
 -- Четвёртая степень (quad) посредством композиции второй (square)
-quad :: Num a => a -> a 
-quad x = (square.square) x
+quad' :: Num a => a -> a 
+quad' x = (square.square) x
 
 -- Определение композии попроще
-quad_quad :: Num a => a -> a
-quad_quad = (quad.quad) 
+quad'' :: Num a => a -> a
+quad'' = (quad.quad) 
 
 
 

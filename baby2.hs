@@ -102,4 +102,13 @@ ff :: Int -> Int
 ff (x + 3) = x + 1
 -}
 
+headDubl :: [a] -> [a]
+headDubl (x:xs) = x:x:xs
+
+length' :: [a] -> Integer
+length' []      = 0
+length' (_:tl) = 1 + length' tl
+
+
+                 
 

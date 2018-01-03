@@ -146,4 +146,4 @@ sqrt' x = until goodEnough improve 1
 -- и то же через лямбда-функции
 sqrt'' x = until (\ y -> (x ~= y*y)) (\ y -> (x/y + y)/2.0) 1
                  
-
+--

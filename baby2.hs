@@ -118,6 +118,16 @@ length' :: [a] -> Integer
 length' []      = 0
 length' (_:tl) = 1 + length' tl
 
+-- Собственные делители числа m
+denominators :: Integer -> [Integer]
+denominators m = filter ((==0).(m `mod`)) [2..m-1]
+-- или так (однако предыдущий вариант работает почти в два раза быстрее ;-)
+denominators' :: Integer -> [Integer]
+denominators' m = filter (\ x -> (m `mod` x) == 0) [2..m-1]
 
-                 
+-- Составить список простых чисел в интервале [2..n]
+primes :: Integer -> [Integer]
+primes n = filter (null.denominators) [2..n]
+
+
 

@@ -118,6 +118,7 @@ length' :: [a] -> Integer
 length' []      = 0
 length' (_:tl) = 1 + length' tl
 
+
 -- Собственные делители числа m
 denominators :: Integer -> [Integer]
 denominators m = filter ((==0).(m `mod`)) [2..m-1]
@@ -130,4 +131,19 @@ primes :: Integer -> [Integer]
 primes n = filter (null.denominators) [2..n]
 
 
+-- Операция проверки равенства чисел с заданной точностью
+infix 5 ~=
+(~=) :: Double -> Double -> Bool
+a ~= b = abs (a - b) < h
+         where h = 1.0e-21
+
+-- Вычисление квадратного корня методом простой итерации
+sqrt' :: Double -> Double
+sqrt' x = until goodEnough improve 1
+          where goodEnough y = x ~= square y
+                improve y = (x/y + y)/2.0
+
+-- и то же через лямбда-функции
+sqrt'' x = until (\ y -> (x ~= y*y)) (\ y -> (x/y + y)/2.0) 1
+                 
 

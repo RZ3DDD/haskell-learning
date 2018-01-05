@@ -129,7 +129,16 @@ denominators' m = filter (\ x -> (m `mod` x) == 0) [2..m-1]
 -- Составить список простых чисел в интервале [2..n]
 primes :: Integer -> [Integer]
 primes n = filter (null.denominators) [2..n]
-
+-- или посредством решета Эратосфена
+primes' :: Integer -> [Integer]
+primes' n = sieve [2..n]
+        where
+            sieve :: [Integer] -> [Integer]
+            sieve [] = []
+            sieve (x:xs) = x:xs''
+                  where xs'' = sieve xs'
+                        xs'  = filter pr xs
+                           where pr m = m `mod` x /= 0
 
 -- Операция проверки равенства чисел с заданной точностью
 infix 5 ~=

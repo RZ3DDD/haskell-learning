@@ -139,6 +139,13 @@ primes' n = sieve [2..n]
                   where xs'' = sieve xs'
                         xs'  = filter pr xs
                            where pr m = m `mod` x /= 0
+-- и вот оптимизированное решето Эратосфена
+primes'' :: Integer -> [Integer]
+primes'' n = sieve [2..n]
+         where 
+            sieve :: [Integer] -> [Integer]
+            sieve [] = []
+            sieve (x:xs) = x : sieve (filter ((/=0).(`mod` x)) xs) 
 
 -- Операция проверки равенства чисел с заданной точностью
 infix 5 ~=

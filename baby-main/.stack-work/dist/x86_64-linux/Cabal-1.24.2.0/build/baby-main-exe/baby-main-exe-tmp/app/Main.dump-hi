@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-27 07:56:21.68847 UTC
+2018-12-11 15:19:56.529812 UTC
 
 interface main@main:Main 8002
-  interface hash: 25da18198e409ea088f01eda7033c04f
-  ABI hash: 37f5114792d7682c5af9b7ea13614da0
+  interface hash: 27b46677962c8d194f9c3443f1a14a40
+  ABI hash: eac703bdd991f550fa920df35d52977d
   export-list hash: 0840cf2b4fd192f947883f13baa4153f
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 41d779b3465d5fc7a025444fd9f5e447
@@ -22,7 +22,7 @@ family instance modules: base-4.9.1.0:Control.Applicative
                          base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
                          base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
                          base-4.9.1.0:GHC.TypeLits
-import  -/  baby-main-0.1.0.0@baby-main-0.1.0.0-DbCPeFMLXhqFt1ATakUWHl:Lib 373a29e060092f92d064702405c6915f
+import  -/  baby-main-0.1.0.0@baby-main-0.1.0.0-DbCPeFMLXhqFt1ATakUWHl:Lib ea0c646d8beff60c8c98f9d0125ec01f
 import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
 import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
 d6831ef04cb9301b090dfae6f7bb7ec7
@@ -37,12 +37,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-ca3405545ba556910f6ff059148525a9
+fd3a83116f5e920b8963da69bdf98a79
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.someFunc1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-2996158fd9e06cd0abdd11a16b53a2d2
+780e7d8e253edb419791407f2907c393
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

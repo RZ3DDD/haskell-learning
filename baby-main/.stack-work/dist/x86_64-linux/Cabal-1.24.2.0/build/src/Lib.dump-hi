@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-07-27 07:56:20.620876 UTC
+2018-12-11 15:19:55.97269 UTC
 
 interface baby-main-0.1.0.0-DbCPeFMLXhqFt1ATakUWHl:Lib 8002
-  interface hash: 167382412564315145fa5ec4f59b4f3f
-  ABI hash: 373a29e060092f92d064702405c6915f
+  interface hash: 1e6791aff1009988cdf63d015f97c874
+  ABI hash: ea0c646d8beff60c8c98f9d0125ec01f
   export-list hash: bb9a2f8a349d2f0400d02c5264eab1f7
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: ab396f11155bd696ab63895436e6f1df
@@ -38,12 +38,12 @@ ff6ea9f1a11da2d3b55bfa19893defa2
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "baby-main-0.1.0.0-DbCPeFMLXhqFt1ATakUWHl"#) -}
-ab43dcf7958003815e98c7abe369af9f
+b0de89d3fe837d856993087f8298024b
   someFunc :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.someFunc1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-87e248404697f9046cf6bc32ea463fa6
+3f3585e7bd99bd5f9dc4c7d8f64409d8
   someFunc1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -55,9 +55,10 @@ ab43dcf7958003815e98c7abe369af9f
                    Lib.someFunc2
                    GHC.Types.True
                    eta) -}
-ba7ac7fe056d6147a53af26e0d544313
+0caf7557b831996f3bbca7399cf20119
   someFunc2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "someFunc"#) -}
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "Haskell: \"Hello, World!\""#) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:
